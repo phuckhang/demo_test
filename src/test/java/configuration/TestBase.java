@@ -26,9 +26,10 @@ public class TestBase extends TestData {
     public void init(String browserName) {
         String name = System.getProperty("browser.name");
         if (name == null) {
-            driver = CommonFunctions.getBrowser(browserName);
+//            driver = CommonFunctions.getDriver(browserName);
+            driver = DriverFactory.getDriver(browserName);
         } else {
-            driver = CommonFunctions.getBrowser(name);
+            driver = DriverFactory.getDriver(name);
         }
 
     }

@@ -3,13 +3,12 @@ package objects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import supports.AbstractComponent;
 
-public class LoginPage {
+public class LoginPage extends AbstractComponent {
 
-    public LoginPage(WebDriver driver) {
-        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 20), this);
+    public LoginPage(final WebDriver driver) {
+        super(driver);
     }
 
     @FindBy(id = "loginEmail")

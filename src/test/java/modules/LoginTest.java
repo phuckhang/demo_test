@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class LoginTest extends TestBase {
 
     @Test(dataProvider = "loginSuccess")
-    public void test_login_success(String email, String pass) {
+    public void test_login_success(String email, String pass) throws InterruptedException {
         logger = extent.createTest("test_login_passed");
         LoginFunc lf = new LoginFunc(driver);
         HomeFunc hf = new HomeFunc(driver);

@@ -12,15 +12,17 @@ public class CommonFunctions extends TestBase {
         driver.get(BASE_URL + path);
     }
 
-    public static WebDriver getBrowser(String browser) {
-        if (browser.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
-            return new ChromeDriver();
-        } else if (browser.equalsIgnoreCase("firefox")) {
-            System.setProperty("webdriver.gecko.driver", "./Drivers/geckodriver.exe");
-            return new FirefoxDriver();
-        } else System.err.println("The browser '" + browser + "' is not defined!!");
-        return null;
-    }
+    // There is a better way that is DriverFactory class
+//    public static WebDriver getDriver(String browser) {
+//        if (browser.equalsIgnoreCase("chrome")) {
+////            System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
+//            System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver");
+//            return new ChromeDriver();
+//        } else if (browser.equalsIgnoreCase("firefox")) {
+//            System.setProperty("webdriver.gecko.driver", "./Drivers/geckodriver.exe");
+//            return new FirefoxDriver();
+//        } else System.err.println("The browser '" + browser + "' is not defined!!");
+//        return null;
+//    }
 
 }
